@@ -1,3 +1,5 @@
+const isEmpty = str => !str.trim().length;
+
 let myImg = document.querySelector('img');
 
 myImg.onclick = function() {
@@ -12,6 +14,7 @@ myImg.onclick = function() {
 
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
+let myInput = document.querySelector('input');
 
 function setUserName() {
     let name = prompt('Please enter your name.');
@@ -24,6 +27,12 @@ function setUserName() {
     }
 }
 
+function setNameFromInput() {
+    let name = myInput.value;
+    localStorage.setItem('name', name);
+    myHeading.textContent = 'Hello Wolf Friend ' + name;
+}
+
 if(!localStorage.getItem('name')) {
     setUserName();
 } else {
@@ -31,5 +40,10 @@ if(!localStorage.getItem('name')) {
 }
 
 myButton.onclick = function() {
-    setUserName();
+    if(myInput.value == null || isEmpty(myInput.value)) {
+        setUserName();
+    } else {
+        setNameFromInput();
+        myInput.value="";
+    }
 }
