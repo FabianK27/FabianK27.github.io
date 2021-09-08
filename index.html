@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="author" content="FK">
-        <meta name="description" content="Example Page">
-        <title>My First Web Page</title>
-        <link href="styles/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link href="wolf-icon.jpg" rel="icon" type="image/x-icon">
-        <!--defer ensures html is loaded first-->
-        <script src="scripts/main.js" defer></script>
-    </head>
 
-    <body>
-        <h1>I love Woofies!</h1>
-        <img src="images/wolf.jpg" alt="Woofers"> 
-        <p>Wolves are the best animals.</p> 
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="FK">
+    <meta name="description" content="Example Page">
+    <title>My First Web Page</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="wolf-icon.jpg" rel="icon" type="image/x-icon">
+    <!--defer ensures html is loaded first-->
+    <script src="scripts/main.js" defer></script>
+</head>
 
-        <p>Find lots of cuties like</p>
-        <ul>
-            <li>Gray Wolves</li>
-            <li>Red Wolves</li>
-            <li>Mexican Wolves</li>
-        </ul>
-        <p>at the <a href="http://nywolf.org" target="_blank" rel="noopener noreferer">WCC</a></p>
-        <p><a href="https://nywolf.org/wp-content/uploads/2018/12/Zephyr_Alana_square.jpg.webp" download="Zephyr_and_Alawa.jpg">Lovely pic of Z and Alawa</a></p>
+<body>
+    <h1>I love Woofies!</h1>
+    <img src="images/wolf.jpg" alt="Woofers">
+    <p>Wolves are the best animals.</p>
 
-        <input type="text">
-        <button>Change user</button>
-    </body>
+    <p>Find lots of cuties like</p>
+    <ul>
+        <li>Gray Wolves</li>
+        <li>Red Wolves</li>
+        <li>Mexican Wolves</li>
+    </ul>
+    <p>at the <a href="http://nywolf.org" target="_blank" rel="noopener noreferer">WCC</a></p>
+    <p><a href="https://nywolf.org/wp-content/uploads/2018/12/Zephyr_Alana_square.jpg.webp"
+            download="Zephyr_and_Alawa.jpg">Lovely pic of Z and Alawa</a></p>
+
+    <input type="text">
+    <button>Change user</button>
+    <br><br>
+    <div class="woof_form">
+        <form method="POST" action="scripts/submit_wooffriend.php">
+            <p>First Name: <input type="text" name="first" /></p>
+            <p>Last Name: <input type="text" name="last" /></p>
+            <p><input type="submit" title="Become Woof Friend!" value="Submit"></p>
+        </form>
+    </div>
+</body>
+
 </html>
